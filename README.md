@@ -80,7 +80,7 @@ Verify the API is running by visiting
 http://localhost:8080/employee
 ```
 
-## Testing the API with postman or other http client
+### Testing the API with an HTTP client of your choice (e.g https://www.getpostman.com/)
 
 Get all Employees
 
