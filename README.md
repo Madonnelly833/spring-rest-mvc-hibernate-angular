@@ -44,7 +44,7 @@ CREATE TABLE `tiyssa`.`employee` (
 Clone this repository to your computer
 
 ```
-git clone https://github.com/erics273/spring-rest-mvc-hibernate.git;
+git clone https://github.com/erics273/spring-rest-mvc-hibernate-angular.git;
 ```
 
 Update the Database Configuration to reflect your database connection information
