@@ -22,9 +22,10 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeService employeeService;
 	
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public ModelAndView home(ModelAndView mv) {
 		mv.addObject("name", "eric");
+		mv.setViewName("home");
 		return mv;
  	}
 
