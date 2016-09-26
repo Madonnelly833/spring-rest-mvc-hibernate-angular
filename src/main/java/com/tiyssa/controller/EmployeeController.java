@@ -11,19 +11,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.tiyssa.entity.Employee;
 import com.tiyssa.service.IEmployeeService;
 
 @Controller
-@RequestMapping("/")
 public class EmployeeController {
 
 	@Autowired
 	private IEmployeeService employeeService;
+	
 	@RequestMapping("/home")
-	public String home() {
- 		return "home";
+	public ModelAndView home(ModelAndView mv) {
+		mv.addObject("name", "eric");
+		return mv;
  	}
 
 	@RequestMapping(value="/employee/{id}", method = RequestMethod.GET )

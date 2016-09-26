@@ -8,7 +8,6 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import com.tiyssa.entity.Employee;
 
-@Transactional
 @Repository
 public class EmployeeDAO implements IEmployeeDAO {
 
@@ -45,7 +44,7 @@ public class EmployeeDAO implements IEmployeeDAO {
 		record.setPassword(employee.getPassword());
 		record.setActive(employee.getActive());
 
-		hibernateTemplate.update(employee);
+		hibernateTemplate.update(record);
 	}
 	@Override
 	public void deleteEmployee(int employeeId) {
