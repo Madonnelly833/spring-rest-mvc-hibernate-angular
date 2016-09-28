@@ -18,7 +18,7 @@ Access to a MySql Server
 
 ### Installing
 
-Create a database called employeedb on your MySql server
+Create a database called tiyssa on your MySql server
 
 ```
 CREATE DATABASE `tiyssa`;
