@@ -26,7 +26,7 @@ public class DbConfig {
 	public DataSource getDataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/springDemo?autoReconnect=true&useSSL=false");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/tiyssa?autoReconnect=true&useSSL=false");
 		dataSource.setUsername("root");
 		dataSource.setPassword("P@ssw0rd");
 		return dataSource;

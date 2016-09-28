@@ -21,13 +21,6 @@ public class EmployeeController {
 
 	@Autowired
 	private IEmployeeService employeeService;
-	
-	@RequestMapping("/")
-	public ModelAndView home(ModelAndView mv) {
-		mv.addObject("name", "eric");
-		mv.setViewName("home");
-		return mv;
- 	}
 
 	@RequestMapping(value="/employee/{id}", method = RequestMethod.GET )
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Integer id) {
@@ -36,7 +29,7 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value= "/employee", method = RequestMethod.GET)
-	public ResponseEntity<List<Employee>> getAllEmployee() {
+	public ResponseEntity<List<Employee>> getAllEmployees() {
 		List<Employee> employees = employeeService.getAllEmployees();
 		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
 	}

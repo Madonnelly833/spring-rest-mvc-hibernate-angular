@@ -1,8 +1,6 @@
 package com.tiyssa.dao;
+
 import java.util.List;
-
-import org.springframework.transaction.annotation.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -13,7 +11,7 @@ public class EmployeeDAO implements IEmployeeDAO {
 
 	@Autowired
 	private HibernateTemplate  hibernateTemplate;
-
+   
 	@Override
 	public Employee getEmployeeById(int employeeId) {
 		return hibernateTemplate.get(Employee.class, employeeId);
@@ -29,7 +27,7 @@ public class EmployeeDAO implements IEmployeeDAO {
 	@Override
 	public boolean addEmployee(Employee employee) {
 		hibernateTemplate.save(employee);
-		return false;
+		return true;
 	}
 
 	@Override
