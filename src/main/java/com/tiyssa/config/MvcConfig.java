@@ -29,7 +29,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter{
     	SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
     	templateResolver.setPrefix("/WEB-INF/view/");
     	templateResolver.setSuffix(".html");
-    	templateResolver.setTemplateMode("HTML5");
+    	templateResolver.setTemplateMode("LEGACYHTML5");
     	templateResolver.setCacheable(false);
         return templateResolver;
     }

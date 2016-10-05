@@ -24,8 +24,7 @@ public class EmployeeController {
 	
 	@RequestMapping("/")
 	public ModelAndView home(ModelAndView mv) {
-		mv.addObject("name", "eric");
-		mv.setViewName("home");
+		mv.setViewName("index");
 		return mv;
  	}
 
